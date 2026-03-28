@@ -1,0 +1,89 @@
+.about {
+  padding: 100px 0; /* more breathing room top and bottom */
+  width: 100%;
+}
+
+.about-title {
+  font-family: var(--font-main);
+  font-size: clamp(36px, 5vw, 54px); /* Smaller title */
+  font-weight: 300;
+  color: var(--color-text);
+  margin-bottom: 40px;
+  letter-spacing: -0.01em;
+}
+
+.about-content {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.about-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about-left-text {
+  font-family: var(--font-main);
+  font-size: clamp(16px, 2vw, 24px); /* Smaller paragraph text */
+  color: var(--color-text);
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.about-btn {
+  display: inline-block;
+  width: fit-content;
+  padding: 12px 32px;
+  background-color: transparent;
+  border: 1px solid var(--color-text);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  font-size: 1rem;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-text);
+  z-index: -1;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease;
+}
+
+.about-btn:hover {
+  color: #111111;
+  transform: scale(1.05); /* Slight scale up on hover */
+}
+
+.about-btn:hover::before {
+  transform: scaleY(1);
+}
+
+.about-right {
+  flex: 1.2;
+  border: 1px solid var(--color-border); /* Thinner border (1px instead of 3px) */
+  padding: 30px 40px;
+  background-color: #0d0d0d;
+}
+
+.about-right-text {
+  font-family: var(--font-main);
+  font-size: clamp(14px, 1.5vw, 20px); /* Scale down text */
+  color: var(--color-text);
+  line-height: 1.8;
+  opacity: 0.9;
+}

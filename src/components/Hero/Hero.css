@@ -1,0 +1,69 @@
+.hero {
+  padding: 32px 0 20px 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.hero-label-title {
+  font-family: var(--font-main);
+  font-size: 1.8rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.hero-label-sub {
+  font-family: var(--font-main);
+  font-size: 1.1rem;
+  color: var(--color-text);
+  opacity: 0.8;
+  letter-spacing: 0.02em;
+}
+
+.hero-name {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+.hero-greeting {
+  font-family: var(--font-main);
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 200;
+  color: var(--color-text);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+.hero-name-text {
+  font-family: var(--font-main);
+  font-size: clamp(40px, 6vw, 84px);
+  font-weight: 200;
+  color: var(--color-text);
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+}
+
+.hero-role {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+  margin-bottom: 40px;
+}
+
+.hero-role-text {
+  font-family: var(--font-main);
+  font-size: 1.5rem;
+  color: var(--color-text);
+  font-weight: 400;
+  padding-top: 10px;
+}
