@@ -2,7 +2,13 @@ import { motion } from 'framer-motion'
 import './KnowMore.css'
 
 function KnowMore() {
-  const socialLinks = ['Github', 'Instagram', 'Youtube', 'Linkedin', 'Gmail']
+  const socialLinks = [
+    { name: 'Github', url: 'https://github.com/maneeshkhandavalli' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/maneesh-khandavalli-33b365361/' },
+    { name: 'Youtube', url: 'https://www.youtube.com/@notebookandjourney' },
+    { name: 'Instagram', url: 'https://www.instagram.com/notebookandjourney/' },
+    { name: 'Gmail', url: 'mailto:maneeshkhandavalliwork@gmail.com' },
+  ]
 
   return (
     <section className="know-more" id="projects">
@@ -29,8 +35,11 @@ function KnowMore() {
         >
           <div className="social-links-container">
             {socialLinks.map((link, i) => (
-              <motion.button 
-                key={link}
+              <motion.a 
+                key={link.name}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="social-btn"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -39,8 +48,8 @@ function KnowMore() {
                 whileHover={{ scale: 1.05, boxShadow: '0px 0px 15px rgba(255,255,255,0.8)' }}
                 whileTap={{ scale: 0.95 }}
               >
-                {link}
-              </motion.button>
+                {link.name}
+              </motion.a>
             ))}
           </div>
         </motion.div>
@@ -50,3 +59,4 @@ function KnowMore() {
 }
 
 export default KnowMore
+
