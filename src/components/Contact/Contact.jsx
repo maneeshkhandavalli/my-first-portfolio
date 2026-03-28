@@ -8,7 +8,7 @@ function Contact() {
         className="contact-title"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.8 }}
       >
         Contact me
@@ -19,7 +19,7 @@ function Contact() {
           className="contact-left"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <input type="text" className="contact-input" placeholder="unsent" defaultValue="unsent" />
@@ -31,7 +31,7 @@ function Contact() {
           className="contact-right"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <p className="contact-right-text">

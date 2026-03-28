@@ -23,6 +23,8 @@ function App() {
         COLOR_UPDATE_SPEED={10}
       />
       
+      <Navbar />
+
       <div className="sticky-panel hero-panel">
         <div className="beams-bg">
           <Beams
@@ -37,7 +39,6 @@ function App() {
           />
         </div>
         <div className="hero-section-content">
-          <Navbar />
           <main className="main-content">
             <Hero />
           </main>
@@ -62,7 +63,7 @@ function App() {
         </main>
       </div>
 
-      <div className="sticky-panel">
+      <div className="last-panel">
         <main className="main-content center-panel">
           <Contact />
         </main>

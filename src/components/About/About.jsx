@@ -8,7 +8,7 @@ function About() {
         className="about-title"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.8 }}
       >
         About me
@@ -19,7 +19,7 @@ function About() {
           className="about-left"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <p className="about-left-text">
@@ -39,7 +39,7 @@ function About() {
           className="about-right"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <p className="about-right-text">

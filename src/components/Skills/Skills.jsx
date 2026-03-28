@@ -121,7 +121,7 @@ function Skills() {
         className="skills-heading"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.8 }}
       >
         My Skills
@@ -135,7 +135,7 @@ function Skills() {
             data-level={skill.level}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.5, delay: index * 0.05 }}
           >
             <div className="skill-icon">

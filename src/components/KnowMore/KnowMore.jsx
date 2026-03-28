@@ -11,7 +11,7 @@ function KnowMore() {
           className="know-more-left"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.8 }}
         >
           <h2 className="know-more-title">Know more</h2>
@@ -24,7 +24,7 @@ function KnowMore() {
           className="know-more-right"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <div className="social-links-container">
@@ -34,7 +34,7 @@ function KnowMore() {
                 className="social-btn"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.4, delay: 0.3 + (i * 0.1) }}
                 whileHover={{ scale: 1.05, boxShadow: '0px 0px 15px rgba(255,255,255,0.8)' }}
                 whileTap={{ scale: 0.95 }}
