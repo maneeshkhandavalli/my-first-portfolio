@@ -4,24 +4,20 @@ import About from './components/About/About'
 import Skills from './components/Skills/Skills'
 import KnowMore from './components/KnowMore/KnowMore'
 import Contact from './components/Contact/Contact'
-import SplashCursor from './components/SplashCursor/SplashCursor'
+import ClickSpark from './components/ClickSpark/ClickSpark'
 import Beams from './components/Beams/Beams'
 import './App.css'
 
 function App() {
   return (
-    <div className="app">
-      <SplashCursor 
-        SIM_RESOLUTION={128}
-        DYE_RESOLUTION={1440}
-        DENSITY_DISSIPATION={3.5}
-        VELOCITY_DISSIPATION={2}
-        PRESSURE={0.1}
-        CURL={3}
-        SPLAT_RADIUS={0.2}
-        SPLAT_FORCE={6000}
-        COLOR_UPDATE_SPEED={10}
-      />
+    <ClickSpark
+      sparkColor="#ffffff"
+      sparkSize={10}
+      sparkRadius={15}
+      sparkCount={8}
+      duration={400}
+    >
+      <div className="app">
       
       <Navbar />
 
@@ -69,7 +65,8 @@ function App() {
         </main>
       </div>
       
-    </div>
+      </div>
+    </ClickSpark>
   )
 }
 
