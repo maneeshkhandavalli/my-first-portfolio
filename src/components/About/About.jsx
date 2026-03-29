@@ -29,6 +29,7 @@ function About() {
             className="about-btn"
             whileHover={{ scale: 1.05, boxShadow: '0px 0px 15px rgba(255,255,255,0.8)' }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => document.getElementById('contacts')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Click to collab
           </motion.button>

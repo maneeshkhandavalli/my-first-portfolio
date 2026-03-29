@@ -6,39 +6,18 @@
 }
 
 .sticky-panel {
-  position: sticky;
-  top: 0;
-  min-height: 100vh;
+  position: relative;
   width: 100%;
   background-color: #000;
   display: flex;
   flex-direction: column;
 }
 
-/* Each panel gets a higher z-index so it stacks on top of the previous one */
-.sticky-panel:nth-child(2) { z-index: 1; }
-.sticky-panel:nth-child(3) { z-index: 2; }
-.sticky-panel:nth-child(4) { z-index: 3; }
-.sticky-panel:nth-child(5) { z-index: 4; }
-.sticky-panel:nth-child(6) { z-index: 5; }
-
-/* Soft gradient fade at the top of every non-hero panel */
-.sticky-panel:not(.hero-panel)::before {
-  content: '';
-  position: absolute;
-  top: -80px;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  background: linear-gradient(to bottom, transparent, #000000);
-  z-index: 10;
-  pointer-events: none;
+.hero-panel {
+  min-height: 100vh;
 }
 
-/* Subtle top shadow for extra depth */
-.sticky-panel:not(.hero-panel) {
-  box-shadow: 0 -30px 60px 10px rgba(0, 0, 0, 0.9);
-}
+/* Removed sticky stacking z-index rules, top shadows, and gradient fades to allow for normal scroll flow */
 
 .beams-bg {
   position: absolute;
@@ -75,10 +54,8 @@
 
 .last-panel {
   position: relative;
-  min-height: 100vh;
   width: 100%;
   background-color: #000;
   display: flex;
   flex-direction: column;
-  z-index: 6;
 }
