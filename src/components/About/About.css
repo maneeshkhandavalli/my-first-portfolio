@@ -75,9 +75,11 @@
 
 .about-right {
   flex: 1.2;
-  border: 1px solid var(--color-border); /* Thinner border (1px instead of 3px) */
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
   padding: 30px 40px;
-  background-color: #0d0d0d;
+  background: linear-gradient(135deg, #181818 0%, #0d0d0d 100%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .about-right-text {

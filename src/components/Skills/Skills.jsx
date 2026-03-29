@@ -10,28 +10,28 @@ const skillsData = [
   {
     title: "React & Next.js",
     subtitle: "Building modern web applications",
-    level: "Expert",
+    level: "Intermediate",
     icon: <FaReact />,
     size: "tall"
   },
   {
     title: "TypeScript",
     subtitle: "Type-safe development",
-    level: "Advanced",
+    level: "Intermediate",
     icon: <SiTypescript />,
     size: "normal"
   },
   {
     title: "Node.js",
     subtitle: "Server-side JavaScript",
-    level: "Advanced",
+    level: "Intermediate",
     icon: <FaNodeJs />,
     size: "normal"
   },
   {
     title: "REST APIs",
     subtitle: "API design and integration",
-    level: "Advanced",
+    level: "Intermediate",
     icon: <BiCodeAlt />,
     size: "normal"
   },
@@ -66,7 +66,7 @@ const skillsData = [
   {
     title: "Express.js",
     subtitle: "Backend web frameworks",
-    level: "Advanced",
+    level: "Intermediate",
     icon: <SiExpress />,
     size: "normal"
   },
@@ -92,23 +92,16 @@ const skillsData = [
     size: "wide"
   },
   {
-    title: "Game Development",
-    subtitle: "Full-stack logic and interactive mechanics",
-    level: "Advanced",
-    icon: <IoGameControllerOutline />,
-    size: "normal"
-  },
-  {
     title: "AI & Machine Learning",
     subtitle: "Building AI agents, LLM integration, fine-tuning",
-    level: "Advanced",
+    level: "Intermediate",
     icon: <BsRobot />,
     size: "wide"
   },
   {
     title: "Python & Data",
     subtitle: "Predictive modeling and statistical analysis",
-    level: "Advanced",
+    level: "Intermediate",
     icon: <FaPython />,
     size: "normal"
   }

@@ -23,8 +23,7 @@ function About() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <p className="about-left-text">
-            My passion lies in the intersection of art and technology, creating
-            visually stunning websites and designs.
+            I’m Maneesh Khandavalli, a Computer Science student driven by curiosity and creativity. I enjoy building clean, modern digital experiences and exploring the intersection of design and technology.
           </p>
           <motion.button 
             className="about-btn"
@@ -42,12 +41,14 @@ function About() {
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <p className="about-right-text">
-            Im pursuing my Bachelor of Technology in Computer Science. This academic foundation
-            has equipped me with a solid understanding of the principles that
-            underpin effective interaction design, providing me with the knowledge to
-            create designs that seamlessly blend aesthetics and functionality
-          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <p className="about-right-text">
+              With a strong interest in AI, machine learning, and cybersecurity, I’m constantly learning and experimenting to turn ideas into real-world solutions. Beyond code, I’m passionate about cinematography, cars, and capturing moments that tell a story.
+            </p>
+            <p className="about-right-text">
+              I believe in creating work that’s not just functional, but meaningful — something that connects, inspires, and lasts.
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>
