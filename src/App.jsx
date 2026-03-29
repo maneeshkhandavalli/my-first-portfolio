@@ -5,6 +5,7 @@ import Skills from './components/Skills/Skills'
 import KnowMore from './components/KnowMore/KnowMore'
 import Contact from './components/Contact/Contact'
 import ClickSpark from './components/ClickSpark/ClickSpark'
+import StarTrail from './components/StarTrail/StarTrail'
 import Beams from './components/Beams/Beams'
 import './App.css'
 
@@ -19,6 +20,7 @@ function App() {
     >
       <div className="app">
       
+      <StarTrail />
       <Navbar />
 
       <div className="sticky-panel hero-panel">
