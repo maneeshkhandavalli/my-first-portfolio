@@ -1,0 +1,124 @@
+.skills-section-constellation {
+  padding: 60px 0;
+  width: 100%;
+}
+
+.skills-heading-constellation {
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: #fff;
+  text-align: left;
+  font-family: var(--font-main);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.constellation-container {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  height: 600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.constellation-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.constellation-hub {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.constellation-hub:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.hub-icon {
+  font-size: 1.75rem;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.hub-label {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  text-align: center;
+}
+
+.orbit-node {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.node-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #181818 0%, #0d0d0d 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.orbit-node:hover .node-icon {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.node-label {
+  position: absolute;
+  top: 100%;
+  margin-top: 8px;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.8);
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 4px 8px;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.constellation-hint {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  font-family: var(--font-main);
+}
+
+@media (max-width: 768px) {
+  .constellation-container {
+    height: 400px;
+    transform: scale(0.7);
+  }
+}

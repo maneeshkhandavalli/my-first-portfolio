@@ -1,0 +1,19 @@
+{
+  "agents": {
+    "agent-1774853542114-ragjjd": {
+      "agentId": "agent-1774853542114-ragjjd",
+      "agentType": "coder",
+      "status": "idle",
+      "health": 1,
+      "taskCount": 0,
+      "config": {
+        "provider": "anthropic",
+        "task": "Add smooth scrolling functionality to the portfolio website."
+      },
+      "createdAt": "2026-03-30T06:52:22.119Z",
+      "model": "sonnet",
+      "modelRoutedBy": "router"
+    }
+  },
+  "version": "3.0.0"
+}
