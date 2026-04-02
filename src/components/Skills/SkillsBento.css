@@ -1,3 +1,4 @@
+/* ─── Section & Heading ────────────────────────────────────────────────────── */
 .skills-section {
   padding: 60px 0;
   width: 100%;
@@ -15,6 +16,7 @@
   margin-right: auto;
 }
 
+/* ─── Bento Grid ─────────────────────────────────────────────────────────── */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -24,7 +26,13 @@
   margin: 0 auto;
 }
 
+/* wrapper gives each card a positioning context for the tooltip */
+.skill-card-wrapper {
+  display: contents; /* behaves transparently in the flex layout */
+}
+
 .skill-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex: 1 1 calc(25% - 1rem);
@@ -36,14 +44,15 @@
   padding: 1.25rem;
   transition: transform 0.2s ease, border-color 0.2s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  overflow: visible; /* allow tooltip to escape the card */
 }
 
 .skill-card:hover {
   transform: translateY(-4px);
   border-color: #4d4d4d;
+  z-index: 20; /* bring hovered card above siblings */
 }
 
-/* Spacing classes */
 .skill-card.tall {
   min-height: 240px;
 }
@@ -52,6 +61,7 @@
   flex: 2 1 calc(50% - 1rem);
 }
 
+/* ─── Card internals ────────────────────────────────────────────────────── */
 .skill-icon {
   font-size: 1.5rem;
   color: #e5e5e5;
@@ -98,7 +108,76 @@
   margin-top: auto;
 }
 
-/* Responsiveness */
+/* ─── Hover Tooltip ────────────────────────────────────────────────────────── */
+.skill-tooltip {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  min-width: 200px;
+  max-width: 280px;
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 0.75rem 0.9rem;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255,255,255,0.04);
+  pointer-events: none;
+  white-space: normal;
+}
+
+/* small downward caret */
+.skill-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: rgba(255, 255, 255, 0.12);
+}
+
+.skill-tooltip::before {
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #1a1a1a;
+  z-index: 1;
+}
+
+.skill-tooltip-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  font-family: var(--font-main);
+  margin-bottom: 0.5rem;
+}
+
+.skill-tooltip-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.skill-tech-pill {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 9999px;
+  font-size: 0.67rem;
+  font-weight: 500;
+  font-family: var(--font-main);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.85);
+  white-space: nowrap;
+}
+
+/* ─── Responsiveness ────────────────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .skill-card {
     flex-basis: calc(33.333% - 1rem);
@@ -117,6 +196,23 @@
   }
   .skill-card.tall {
     min-height: 150px;
+  }
+  /* On mobile show tooltip below the card to avoid off-screen clipping */
+  .skill-tooltip {
+    bottom: auto;
+    top: calc(100% + 10px);
+  }
+  .skill-tooltip::after {
+    top: auto;
+    bottom: 100%;
+    border-top-color: transparent;
+    border-bottom-color: rgba(255, 255, 255, 0.12);
+  }
+  .skill-tooltip::before {
+    top: auto;
+    bottom: calc(100% - 1px);
+    border-top-color: transparent;
+    border-bottom-color: #1a1a1a;
   }
 }
 
