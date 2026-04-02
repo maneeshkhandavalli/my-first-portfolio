@@ -22,6 +22,7 @@ html, body {
   color: var(--color-text);
   font-family: var(--font-main);
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
 #root {

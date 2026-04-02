@@ -101,7 +101,7 @@ function KnowMore() {
     <>
       {resumeOpen && <ResumeModal onClose={() => setResumeOpen(false)} />}
 
-      <section className="know-more" id="about-more">
+      <section className="know-more" id="know-more">
         <div className="know-more-content">
           <motion.div
             className="know-more-left"

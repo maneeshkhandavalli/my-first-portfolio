@@ -1,6 +1,6 @@
 import './Navbar.css'
 
-const navLinks = ['home', 'about me', 'Skills', 'Projects', 'contacts']
+const navLinks = ['home', 'about me', 'Skills', 'Projects', 'Know More', 'contacts']
 
 function Navbar() {
   return (
