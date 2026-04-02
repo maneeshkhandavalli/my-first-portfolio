@@ -105,8 +105,8 @@ function SkillsConstellation() {
                 y1={fromPos.y}
                 x2={toPos.x}
                 y2={toPos.y}
-                stroke={isHighlighted ? "rgba(255,255,255,0.2)" : "rgba(255,255,255,0.05)"}
-                strokeWidth={isHighlighted ? 1.5 : 0.5}
+                stroke={isHighlighted ? "rgba(255,255,255,0.5)" : "rgba(255,255,255,0.15)"}
+                strokeWidth={isHighlighted ? 2 : 1}
                 initial={{ pathLength: 0 }}
                 animate={isInView ? { pathLength: 1 } : {}}
                 transition={{ delay: i * 0.05, duration: 0.8 }}
@@ -122,8 +122,8 @@ function SkillsConstellation() {
               cy="0"
               r={radius}
               fill="none"
-              stroke="rgba(255,255,255,0.05)"
-              strokeWidth="1"
+              stroke="rgba(255,255,255,0.15)"
+              strokeWidth="1.5"
               strokeDasharray="5,5"
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
@@ -159,7 +159,8 @@ function SkillsConstellation() {
               key={skill.name}
               className="orbit-node"
               style={{
-                transform: `translate(${pos.x}px, ${pos.y}px)`,
+                x: pos.x,
+                y: pos.y,
               }}
               initial={{ scale: 0, opacity: 0 }}
               animate={isInView ? {
