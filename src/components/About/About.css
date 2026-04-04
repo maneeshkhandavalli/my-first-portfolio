@@ -1,6 +1,8 @@
 .about {
   padding: 100px 0; /* more breathing room top and bottom */
   width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .about-title {

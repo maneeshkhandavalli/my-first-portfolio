@@ -8,8 +8,8 @@ import './Skills.css'
 
 const variants = [
   { id: 'bento', label: 'Bento Grid', component: SkillsBento },
-  { id: 'carousel', label: 'Carousel', component: SkillsCarousel },
-  { id: 'constellation', label: 'Constellation', component: SkillsConstellation },
+  // { id: 'carousel', label: 'Carousel', component: SkillsCarousel },
+  // { id: 'constellation', label: 'Constellation', component: SkillsConstellation },
   { id: 'terminal', label: 'Terminal', component: SkillsTerminal },
 ]
 

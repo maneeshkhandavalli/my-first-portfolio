@@ -2,8 +2,6 @@ import { useRef, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import './Projects.css'
 
-import curaAiImg from '../../assets/projects/cura_ai.png'
-import comingSoonImg from '../../assets/projects/coming_soon.png'
 
 const projectsData = [
   {
@@ -11,7 +9,6 @@ const projectsData = [
     title: 'CuraAI',
     description: 'A full-stack AI health platform built with React, Supabase, and the Claude API. Features an AI doctor, live hospital locator, and secure medical records using a premium glassmorphism design.',
     link: 'https://cura-ai.lovable.app',
-    image: '/project-images/curaAI.png',
     tags: ['React', 'Supabase', 'AI/ML']
   },
   {
@@ -19,7 +16,6 @@ const projectsData = [
     title: 'Galaxy Notes',
     description: 'A simple, intuitive note-making app. Clean UI, minimal distractions, and essential syntax markup to help keep your ideas organized effortlessly.',
     link: '#',
-    image: '/project-images/gravityNotes.png',
     tags: ['React', 'CSS', 'Notes']
   },
   {
@@ -27,7 +23,6 @@ const projectsData = [
     title: 'Midnight Studies',
     description: 'A dedicated productivity app designed for late-night grinds. Includes focus timers, dark mode optimization, and task tracking to enhance late study sessions.',
     link: '#',
-    image: comingSoonImg,
     tags: ['Productivity', 'JavaScript']
   },
   {
@@ -35,7 +30,6 @@ const projectsData = [
     title: 'More Projects',
     description: 'Stay tuned! More exciting projects are being crafted in the lab. I am always experimenting and building new things.',
     link: '#',
-    image: comingSoonImg,
     tags: ['Next', 'Future']
   }
 ]
@@ -88,9 +82,7 @@ function Projects() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
             >
-              <div className="project-image-wrapper">
-                <img src={project.image} alt={project.title} className="project-image" draggable="false" />
-              </div>
+
               <div className="project-content">
                 <h3 className="project-name">{project.title}</h3>
                 <p className="project-desc">{project.description}</p>
