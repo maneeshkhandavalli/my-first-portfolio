@@ -114,6 +114,9 @@
 }
 
 @media (max-width: 768px) {
+  .skills-heading-terminal {
+    text-align: center;
+  }
   .terminal-content {
     font-size: 0.65rem;
     padding: 12px;

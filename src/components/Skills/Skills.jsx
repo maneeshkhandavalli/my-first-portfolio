@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import SkillsCarousel from './SkillsCarousel'
 import SkillsConstellation from './SkillsConstellation'
 import SkillsTerminal from './SkillsTerminal'
@@ -15,6 +15,21 @@ const variants = [
 
 function Skills() {
   const [activeVariant, setActiveVariant] = useState('bento')
+
+  useEffect(() => {
+    const mql = window.matchMedia('(max-width: 768px)')
+    
+    // Set initial value
+    setActiveVariant(mql.matches ? 'terminal' : 'bento')
+
+    // Listen for window resize
+    const handleChange = (e) => {
+      setActiveVariant(e.matches ? 'terminal' : 'bento')
+    }
+
+    mql.addEventListener('change', handleChange)
+    return () => mql.removeEventListener('change', handleChange)
+  }, [])
 
   const ActiveComponent = variants.find(v => v.id === activeVariant)?.component || SkillsBento
 

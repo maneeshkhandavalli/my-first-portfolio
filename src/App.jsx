@@ -8,6 +8,7 @@ import Contact from './components/Contact/Contact'
 import ClickSpark from './components/ClickSpark/ClickSpark'
 import StarTrail from './components/StarTrail/StarTrail'
 import Beams from './components/Beams/Beams'
+import Footer from './components/Footer/Footer'
 import './App.css'
 
 function App() {
@@ -73,6 +74,8 @@ function App() {
           <Contact />
         </main>
       </div>
+      
+      <Footer />
       
       </div>
     </ClickSpark>
