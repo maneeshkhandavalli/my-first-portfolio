@@ -52,8 +52,8 @@ function ResumeModal({ onClose }) {
           {/* Header row */}
           <div className="resume-modal-header">
             <a
-              href={RESUME_PDF}
-              download="maneesh_resume.pdf"
+              href="/resume/maneesh_khandavalli_resume.pdf"
+              download="Maneesh_Khandavalli_Resume.pdf"
               className="resume-download-btn"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
@@ -72,12 +72,12 @@ function ResumeModal({ onClose }) {
             </button>
           </div>
 
-          {/* PDF embed */}
-          <div className="resume-iframe-wrap">
-            <iframe
-              src={RESUME_PDF}
-              title="Maneesh Resume"
-              className="resume-iframe"
+          {/* Resume Image */}
+          <div className="resume-iframe-wrap" style={{ overflowY: 'auto', maxHeight: '75vh' }}>
+            <img 
+              src="/resume/maneesh_resume.svg" 
+              alt="Resume" 
+              style={{ width: '100%', display: 'block' }} 
             />
           </div>
         </motion.div>
@@ -136,7 +136,7 @@ function KnowMore() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.2 + (i * 0.1) }}
-                  whileHover={{ y: -5, borderColor: link.color }}
+                  whileHover={{ scale: 1.05, borderColor: link.color, backgroundColor: 'rgba(255,255,255,0.05)', transition: { duration: 0.25, ease: "easeOut" } }}
                 >
                   <div className="social-icon" style={{ color: link.color }}>
                     {link.icon}
@@ -153,7 +153,7 @@ function KnowMore() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.2 + (5 * 0.1) }}
-                whileHover={{ y: -5, borderColor: '#a78bfa' }}
+                whileHover={{ scale: 1.05, borderColor: '#a78bfa', backgroundColor: 'rgba(255,255,255,0.05)', transition: { duration: 0.25, ease: "easeOut" } }}
                 onClick={() => setResumeOpen(true)}
               >
                 <div className="social-icon" style={{ color: '#a78bfa' }}>

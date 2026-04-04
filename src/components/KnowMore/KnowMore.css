@@ -210,14 +210,14 @@
 @media (max-width: 900px) {
   .know-more-content {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
   }
   .know-more-left {
-    margin: 0 auto;
-    text-align: center;
+    margin: 0;
+    text-align: left;
   }
   .know-more-right {
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
   }
 }

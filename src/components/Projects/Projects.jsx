@@ -11,7 +11,7 @@ const projectsData = [
     title: 'CuraAI',
     description: 'A full-stack AI health platform built with React, Supabase, and the Claude API. Features an AI doctor, live hospital locator, and secure medical records using a premium glassmorphism design.',
     link: 'https://cura-ai.lovable.app',
-    image: curaAiImg,
+    image: '/project-images/curaAI.png',
     tags: ['React', 'Supabase', 'AI/ML']
   },
   {
@@ -19,7 +19,7 @@ const projectsData = [
     title: 'Galaxy Notes',
     description: 'A simple, intuitive note-making app. Clean UI, minimal distractions, and essential syntax markup to help keep your ideas organized effortlessly.',
     link: '#',
-    image: comingSoonImg,
+    image: '/project-images/gravityNotes.png',
     tags: ['React', 'CSS', 'Notes']
   },
   {

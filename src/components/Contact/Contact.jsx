@@ -1,14 +1,16 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import emailjs from '@emailjs/browser'
 import './Contact.css'
 
+// ✅ FILL THESE IN:
+const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID'   // from emailjs.com dashboard
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'  // from emailjs.com dashboard
+const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY'   // from emailjs.com Account > General
+
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  })
-  const [status, setStatus] = useState('idle') // idle | loading | success | error
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+  const [status, setStatus] = useState('idle')
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -16,32 +18,23 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    setStatus('loading')
-
+    setStatus('sending')
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          access_key: '0796d740-65f2-4625-8498-804013dee13f',
-          name: formData.name,
-          email: formData.email,
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
           message: formData.message,
-          from_name: 'Portfolio Contact Form',
-          subject: `New message from ${formData.name}`,
-        })
-      })
-
-      const data = await response.json()
-      if (data.success) {
-        setStatus('success')
-        setFormData({ name: '', email: '', message: '' })
-        setTimeout(() => setStatus('idle'), 4000)
-      } else {
-        setStatus('error')
-        setTimeout(() => setStatus('idle'), 4000)
-      }
-    } catch {
+        },
+        EMAILJS_PUBLIC_KEY
+      )
+      setStatus('success')
+      setFormData({ name: '', email: '', message: '' })
+      setTimeout(() => setStatus('idle'), 4000)
+    } catch (err) {
+      console.error('EmailJS error:', err)
       setStatus('error')
       setTimeout(() => setStatus('idle'), 4000)
     }
@@ -49,7 +42,7 @@ function Contact() {
 
   return (
     <section className="contact" id="contacts">
-      <motion.h2 
+      <motion.h2
         className="contact-title"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +53,7 @@ function Contact() {
       </motion.h2>
 
       <div className="contact-content">
-        <motion.form 
+        <motion.form
           className="contact-left"
           onSubmit={handleSubmit}
           initial={{ opacity: 0, x: -50 }}
@@ -68,47 +61,47 @@ function Contact() {
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <input 
-            type="text" 
+          <input
+            type="text"
             name="name"
-            className="contact-input" 
-            placeholder="Your name" 
+            className="contact-input"
+            placeholder="Your name"
             value={formData.name}
             onChange={handleChange}
             required
           />
-          <input 
-            type="email" 
+          <input
+            type="email"
             name="email"
-            className="contact-input" 
-            placeholder="Your email" 
+            className="contact-input"
+            placeholder="Your email"
             value={formData.email}
             onChange={handleChange}
             required
           />
-          <textarea 
+          <textarea
             name="message"
-            className="contact-textarea" 
+            className="contact-textarea"
             placeholder="Your message..."
             value={formData.message}
             onChange={handleChange}
             required
           />
-          <motion.button 
+          <motion.button
             type="submit"
             className="contact-submit-btn"
-            disabled={status === 'loading'}
-            whileHover={{ scale: 1.03, boxShadow: '0px 0px 15px rgba(255,255,255,0.6)' }}
+            disabled={status === 'sending'}
+            whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
           >
-            {status === 'loading' ? 'Sending...' : 
-             status === 'success' ? '✓ Message Sent!' : 
-             status === 'error' ? 'Failed — Try Again' : 
-             'Send Message'}
+            {status === 'sending' ? 'Sending...' :
+             status === 'success' ? 'Message Sent ✓' :
+             status === 'error'   ? 'Failed — Try Again' :
+             'Send'}
           </motion.button>
         </motion.form>
 
-        <motion.div 
+        <motion.div
           className="contact-right"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -125,4 +118,3 @@ function Contact() {
 }
 
 export default Contact
-
