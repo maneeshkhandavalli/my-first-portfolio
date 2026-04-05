@@ -1,0 +1,7 @@
+C:\Users\manee\Documents\important data-20260308T025445Z-3-004\important data\programing\Portfolio Rebuild\dist\Midnight.png
+C:\Users\manee\Documents\important data-20260308T025445Z-3-004\important data\programing\Portfolio Rebuild\dist\assets\coming_soon-BsYMopas.png
+C:\Users\manee\Documents\important data-20260308T025445Z-3-004\important data\programing\Portfolio Rebuild\dist\assets\cura_ai-BnYsRkmQ.png
+C:\Users\manee\Documents\important data-20260308T025445Z-3-004\important data\programing\Portfolio Rebuild\public\project-images\curaAI.png
+C:\Users\manee\Documents\important data-20260308T025445Z-3-004\important data\programing\Portfolio Rebuild\public\project-images\gravityNotes.png
+C:\Users\manee\Documents\important data-20260308T025445Z-3-004\important data\programing\Portfolio Rebuild\src\assets\projects\coming_soon.png
+C:\Users\manee\Documents\important data-20260308T025445Z-3-004\important data\programing\Portfolio Rebuild\src\assets\projects\cura_ai.png

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaGithub, FaLinkedin, FaYoutube, FaInstagram, FaEnvelope } from 'react-icons/fa'
 import './KnowMore.css'
+import resumeImage from '../../assets/resume/maneeshresume.png'
 
 // Inline SVG for FileText (document icon) — no extra dependency needed
 const FileTextIcon = () => (
@@ -52,8 +53,8 @@ function ResumeModal({ onClose }) {
           {/* Header row */}
           <div className="resume-modal-header">
             <a
-              href="/resume/maneesh_khandavalli_resume.pdf"
-              download="Maneesh_Khandavalli_Resume.pdf"
+              href={resumeImage}
+              download="Maneesh_Resume.png"
               className="resume-download-btn"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
@@ -75,7 +76,7 @@ function ResumeModal({ onClose }) {
           {/* Resume Image */}
           <div className="resume-iframe-wrap" style={{ overflowY: 'auto', maxHeight: '75vh' }}>
             <img 
-              src="/resume/maneesh_resume.svg" 
+              src={resumeImage} 
               alt="Resume" 
               style={{ width: '100%', display: 'block' }} 
             />

@@ -1,0 +1,4 @@
+C:\Users\manee\Documents\important data-20260308T025445Z-3-004\important data\programing\Portfolio Rebuild\src\assets\projects
+C:\Users\manee\Documents\important data-20260308T025445Z-3-004\important data\programing\Portfolio Rebuild\src\assets\resume
+C:\Users\manee\Documents\important data-20260308T025445Z-3-004\important data\programing\Portfolio Rebuild\src\assets\projects\coming_soon.png
+C:\Users\manee\Documents\important data-20260308T025445Z-3-004\important data\programing\Portfolio Rebuild\src\assets\projects\cura_ai.png
