@@ -22,11 +22,17 @@ const terminalLines = [
   { text: 'const MongoDB      = "Intermed";   // ██████████░░░░░░░░░░ 70%', type: "code", delay: 3.5, bar: 70 },
   { text: 'const REST_API     = "Advanced";   // ██████████████░░░░░░ 85%', type: "code", delay: 3.7, bar: 85 },
   { text: "", type: "empty", delay: 3.9 },
-  { text: "# TOOLS & SPECIALIZED", type: "section", delay: 4.1 },
+  { text: "# SPECIALIZATIONS", type: "section", delay: 4.1 },
   { text: 'const Git          = "Advanced";   // ███████████████░░░░░ 90%', type: "code", delay: 4.3, bar: 90 },
-  { text: 'const Framer       = "Advanced";   // ██████████████░░░░░░ 85%', type: "code", delay: 4.5, bar: 85 },
   { text: 'const AI_ML        = "Learning";   // ██████████░░░░░░░░░░ 70%', type: "code", delay: 4.7, bar: 70 },
   { text: 'const Python       = "Learning";   // █████████░░░░░░░░░░░ 65%', type: "code", delay: 4.9, bar: 65 },
+  { text: "", type: "empty", delay: 3.9 },
+  { text: "# TOOLS", type: "section", delay: 4.1 },
+  { text: 'const Figma          = "Advanced";   // ███████████████░░░░░ 90%', type: "code", delay: 4.3, bar: 90 },
+  { text: 'const Framer       = "Advanced";   // ██████████████░░░░░░ 85%', type: "code", delay: 4.5, bar: 85 },
+  { text: 'const Stitch      = "Learning";   // ██████████░░░░░░░░░░ 70%', type: "code", delay: 4.7, bar: 70 },
+  { text: 'const Canva       = "Learning";   // █████████░░░░░░░░░░░ 65%', type: "code", delay: 4.9, bar: 65 },
+  
 ]
 
 function SkillsTerminal() {
