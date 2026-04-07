@@ -20,20 +20,19 @@ const terminalLines = [
   { text: 'const NodeJS       = "Intermed";   // ████████████░░░░░░░░ 80%', type: "code", delay: 3.1, bar: 80 },
   { text: 'const Express      = "Intermed";   // ███████████░░░░░░░░░ 75%', type: "code", delay: 3.3, bar: 75 },
   { text: 'const MongoDB      = "Intermed";   // ██████████░░░░░░░░░░ 70%', type: "code", delay: 3.5, bar: 70 },
-  { text: 'const REST_API     = "Advanced";   // ██████████████░░░░░░ 85%', type: "code", delay: 3.7, bar: 85 },
+  { text: 'const REST_API     = "Learning";   // ███░░░░░░░░░░░░░░░░░ 25%', type: "code", delay: 3.7, bar: 25 },
   { text: "", type: "empty", delay: 3.9 },
   { text: "# SPECIALIZATIONS", type: "section", delay: 4.1 },
   { text: 'const Git          = "Advanced";   // ███████████████░░░░░ 90%', type: "code", delay: 4.3, bar: 90 },
-  { text: 'const AI_ML        = "Learning";   // ██████████░░░░░░░░░░ 70%', type: "code", delay: 4.7, bar: 70 },
-  { text: 'const Python       = "Learning";   // █████████░░░░░░░░░░░ 65%', type: "code", delay: 4.9, bar: 65 },
-  { text: "", type: "empty", delay: 3.9 },
-  { text: "# TOOLS", type: "section", delay: 4.1 },
-  { text: 'const Figma          = "Advanced";   // ███████████████░░░░░ 90%', type: "code", delay: 4.3, bar: 90 },
-  { text: 'const Framer       = "Advanced";   // ██████████████░░░░░░ 85%', type: "code", delay: 4.5, bar: 85 },
-  { text: 'const Stitch      = "Learning";   // ██████████░░░░░░░░░░ 70%', type: "code", delay: 4.7, bar: 70 },
-  { text: 'const Canva       = "Learning";   // █████████░░░░░░░░░░░ 65%', type: "code", delay: 4.9, bar: 65 },
-  
-]
+  { text: 'const AI_ML        = "Learning";   // ██████████░░░░░░░░░░ 70%', type: "code", delay: 4.5, bar: 70 },
+  { text: 'const Python       = "Learning";   // █████████░░░░░░░░░░░ 65%', type: "code", delay: 4.7, bar: 65 },
+  { text: "", type: "empty", delay: 4.9 },
+  { text: "# TOOLS", type: "section", delay: 5.1 },
+  { text: 'const Figma        = "Advanced";   // ███████████████░░░░░ 90%', type: "code", delay: 5.3, bar: 90 },
+  { text: 'const Framer       = "Advanced";   // ██████████████░░░░░░ 85%', type: "code", delay: 5.5, bar: 85 },
+  { text: 'const Stitch       = "Learning";   // ██████████░░░░░░░░░░ 70%', type: "code", delay: 5.7, bar: 70 },
+  { text: 'const Canva        = "Advanced";   // ██████████████████░░ 95%', type: "code", delay: 5.9, bar: 95 },
+] 
 
 function SkillsTerminal() {
   const sectionRef = useRef(null)
@@ -113,8 +112,11 @@ function SkillsTerminal() {
               <motion.div
                 key={index}
                 className={`terminal-line ${line.type}`}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: visibleLines.includes(index) ? 1 : 0 }}
+                initial={{ opacity: 0, display: 'none' }}
+                animate={{ 
+                  opacity: visibleLines.includes(index) ? 1 : 0,
+                  display: visibleLines.includes(index) ? 'block' : 'none'
+                }}
                 transition={{ duration: 0.1 }}
               >
                 <span style={{ color: getLineColor(line.type) }}>
