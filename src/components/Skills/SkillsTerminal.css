@@ -18,7 +18,7 @@
 .terminal-window {
   max-width: 1000px;
   margin: 0 auto;
-  background: #1e1e1e;
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);

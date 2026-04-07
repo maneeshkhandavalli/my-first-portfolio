@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 import './Skills.css'
 
 const variants = [
-  { id: 'bento', label: 'Bento Grid', component: SkillsBento },
+  // { id: 'bento', label: 'Bento Grid', component: SkillsBento },
   // { id: 'carousel', label: 'Carousel', component: SkillsCarousel },
   // { id: 'constellation', label: 'Constellation', component: SkillsConstellation },
   { id: 'terminal', label: 'Terminal', component: SkillsTerminal },
@@ -31,7 +31,7 @@ function Skills() {
     return () => mql.removeEventListener('change', handleChange)
   }, [])
 
-  const ActiveComponent = variants.find(v => v.id === activeVariant)?.component || SkillsBento
+  const ActiveComponent = variants.find(v => v.id === activeVariant)?.component || SkillsTerminal  //this where you can change which one is default
 
   return (
     <div className="skills-wrapper">
@@ -42,7 +42,10 @@ function Skills() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <span className="toggle-label">Design:</span>
+
+        {/* //this is where you turn on and off the toggle desing feature */}
+
+        {/* <span className="toggle-label">Design:</span>
         <div className="toggle-buttons">
           {variants.map(variant => (
             <button
@@ -53,7 +56,7 @@ function Skills() {
               {variant.label}
             </button>
           ))}
-        </div>
+        </div> */}
       </motion.div>
 
       {/* Active Skill Component */}

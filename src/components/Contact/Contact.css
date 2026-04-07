@@ -36,7 +36,7 @@
 
 .contact-input, .contact-textarea {
   width: 100%;
-  background-color: #1a1a1a;
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid #333333;
   border-radius: 12px;
   padding: 18px 24px;
@@ -67,7 +67,7 @@
 .contact-right {
   flex: 1;
   padding: 40px;
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.05);q2n
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 20px;
   display: flex;
