@@ -36,7 +36,7 @@ const terminalLines = [
 
 function SkillsTerminal() {
   const sectionRef = useRef(null)
-  const isInView = useInView(sectionRef, { once: false, amount: 0.3 })
+  const isInView = useInView(sectionRef, { once: true, amount: 0.3 })
   const [visibleLines, setVisibleLines] = useState([])
   const [cursorVisible, setCursorVisible] = useState(true)
 
